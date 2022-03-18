@@ -1,26 +1,45 @@
 <!DOCTYPE html>
+<!-- translate="yes"-p0.,l -->
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Calculates what every participant's portion of an expense should be." property="og:description"/>
+        <meta name="keywords" content="Portion,Ratio,Share,Percentage,Rent-Split,Rent,Split,Splitting,Splitter,Income,Expense,Roommate,Housband,Wife,Partner,Friend,Friends,Calculator,Calculate,Figure-Out,Split,Joint,Fair,Joint-Income,Shared,Costs,Cost,Share,Equal,Proportional,Partition,Partitioned,Mortgage,Utility,Budget,Shares,Money,Bills,Gas,Finances,Finance,Economies,Cash,Check,Fund,Earnings,Calculations,Charge,Repayment,Payment,Transfer,different-salaries,different-budget,different-income"/>
+       
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
         <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png"/>
         <link rel="stylesheet" type="text/css" href="style.css"/>
+
+        <!-- Hotjar Tracking Code for https://split-expense.com -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2883059,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+        
     </head>
 
     <body>
-        <h1>PROPORTIONAL CALCULATOR</h1>                       
+        <h1>COST SPLIT CALCULATOR</h1>
+
+        <h3>Fairly calculate the cost of an expense based on each person's income or budget.</h3>                       
           <form id="expense">
             Expense: <input type="text" id="expense-value" value="510"/><br><br>
           </form>
 
           <form id="participants">
             Person A: <input type="text" id="participant-A" value="Melany"/>
-            earns: <input type="currency-field" id="participant-A-income" value="120000"/><br>
+            income/budget: <input type="currency-field" id="participant-A-income" value="120000"/><br>
             Person B: <input type="text" id="participant-B" value="Bastien"/>
-            earns: <input type="currency-field" id="participant-B-income" value="120000"/><br><br>              
+            income/budget: <input type="currency-field" id="participant-B-income" value="120000"/><br><br>              
           </form>
 
           <button onclick="myFunction()">Calculate!</button>
@@ -33,12 +52,12 @@
             <input type="text" id="participant-A-expense-result" value=""/>towards the expense. 
             <br>This is 
             <input type="text" id="participant-A-expense-porportion" value=""/>% of the expense and <br>
-            <input type="text" id="participant-A-expense-porportion-of-income" value=""/>% of their income.<br><br><br>
+            <input type="text" id="participant-A-expense-porportion-of-income" value=""/>% of their income/budget.<br><br><br>
 
             <input type="text" id="reference-participant-B" value=""/> owes: 
             <input type="text" id="participant-B-expense-result" value=""/>towards the expense.<br>This is 
             <input type="text" id="participant-B-expense-porportion" value=""/>% of the expense and <br>
-            <input type="text" id="participant-B-expense-porportion-of-income" value=""/>% of their income.<br><br><br>
+            <input type="text" id="participant-B-expense-porportion-of-income" value=""/>% of their income/budget.<br><br><br>
           </form>
                
 
