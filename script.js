@@ -17,21 +17,28 @@ function myFunction() {
   var participantBIncome = document.getElementById("participant-B-income");
 
   var totalIncome = parseFloat(participantAIncome.value) + parseFloat(participantBIncome.value);
-  console.log(totalIncome);
+  // console.log(totalIncome);
   
   // document.getElementById("results");
+
   document.getElementById("reference-participant-A").value = participantA.value;
-  document.getElementById("participant-A-expense-result");
-  document.getElementById("participant-A-expense-porportion").value = participantAIncome.value/totalIncome;
-  document.getElementById("participant-A-expense-porportion-of-income");
+  var percentageA = parseFloat(participantAIncome.value/totalIncome);
+  document.getElementById("participant-A-expense-porportion").value = percentageA*100;
+  var rentA = percentageA*expenseValue.value;
+  document.getElementById("participant-A-expense-result").value = rentA;
+  document.getElementById("participant-A-expense-porportion-of-income").value = ((rentA/participantAIncome.value)*100).toFixed(2);
   
+
   document.getElementById("reference-participant-B").value = participantB.value;
-  document.getElementById("participant-B-expense-result");
-  document.getElementById("participant-B-expense-porportion").value = participantBIncome.value/totalIncome;
-  document.getElementById("participant-B-expense-porportion-of-income");
+  var percentageB = parseFloat(participantBIncome.value/totalIncome);
+  document.getElementById("participant-B-expense-porportion").value = percentageB*100;
+  var rentB = percentageB*expenseValue.value;
+  document.getElementById("participant-B-expense-result").value = rentB;
+  document.getElementById("participant-B-expense-porportion-of-income").value = ((rentB/participantBIncome.value)*100).toFixed(2);
+  
 
 
-  console.log(expenseValue.value);
+  console.log(typeof parseFloat(expenseValue.value));
 
 
 }
