@@ -1,0 +1,14 @@
+html, 
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #cb844e;
+  letter-spacing: 3  px; 
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+  color: #844236;
+  letter-spacing: 5px;
+}
