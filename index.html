@@ -29,86 +29,82 @@
 <body>
     <h1>COST SPLIT CALCULATOR</h1>
     <h3>Fairly calculate the cost of an expense based on each person's income or budget.</h3>
-    <form id="expense">
-        Expense: <input type="text" id="expense-value" value="510" /><br><br>
-    </form>
-    <form id="participants">
-        Person A: <input type="text" id="participant-A" value="Melany" /><br>
-        income/budget: <input type="currency-field" id="participant-A-income" value="120000" /><br><br>
-        Person B: <input type="text" id="participant-B" value="Bastien" /><br>
-        income/budget: <input type="currency-field" id="participant-B-income" value="120000" /><br><br>
-    </form>
-    <button onclick="myFunction()">Calculate!</button>
-    
-    <h1>RESULTS</h1>
-    
     <div class="limiter">
-        <!-- <div class="container-table100"> -->
         <div class="wrap-table100">
             <div class="table">
                 <div class="row header">
                     <div class="cell">
-                        Name
+                        Expense
                     </div>
                     <div class="cell">
-                        Expense Contribution
-                    </div>
-                    <div class="cell">
-                        % of Expense
-                    </div>
-                    <div class="cell">
-                        % of Income/Budget
+                        $<input type="text" id="expense-value" value="510" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="cell" id="Name">
-                      
+                        <input type="text" id="participant-A" value="Melany" />
                     </div>
-                    <div class="cell" id="Expense Contribution">
-                        
-                    </div>
-                    <div class="cell" id="% of Expense">
-                        
-                    </div>
-                    <div class="cell" id="% of Income/Budget">
-                      
+                    <div class="cell" id="Income">
+                        $<input type="currency-field" id="participant-A-income" value="130000" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="cell" id="Name">
-                        
+                        <input type="text" id="participant-B" value="Bastien" />
                     </div>
-                    <div class="cell" id="Expense Contribution">
-                        
-                    </div>
-                    <div class="cell" id="% of Expense">
-                        
-                    </div>
-                    <div class="cell" id="% of Income/Budget">
-                        
+                    <div class="cell" id="Income">
+                        $<input type="currency-field" id="participant-B-income" value="120000" />
                     </div>
                 </div>
             </div>
         </div>
-        <!-- </div> -->
     </div>
-
+    <button onclick="myFunction()">Calculate!</button>
+    <h1>RESULTS</h1>
+    <div id="results">
+        <div class="limiter">
+            <div class="wrap-table100">
+                <div class="table">
+                    <div class="row header">
+                        <div class="cell">
+                            Name
+                        </div>
+                        <div class="cell">
+                            Expense Contribution
+                        </div>
+                        <div class="cell">
+                            % of Expense
+                        </div>
+                        <div class="cell">
+                            % of Income/Budget
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell" id="Name">
+                        </div>
+                        <div class="cell" id="Expense Contribution">
+                        </div>
+                        <div class="cell" id="% of Expense">
+                        </div>
+                        <div class="cell" id="% of Income/Budget">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell" id="Name">
+                        </div>
+                        <div class="cell" id="Expense Contribution">
+                        </div>
+                        <div class="cell" id="% of Expense">
+                        </div>
+                        <div class="cell" id="% of Income/Budget">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <h3 id="text-results-A"></h3>
     <h3 id="text-results-B"></h3>
-
-  <!--   <form id="results">
-        <br><br><br><input type="text" id="reference-participant-A" value="" /> owes:
-        <input type="text" id="participant-A-expense-result" value="" />towards the expense.
-        <br>This is
-        <input type="text" id="participant-A-expense-porportion" value="" />% of the expense and <br>
-        <input type="text" id="participant-A-expense-porportion-of-income" value="" />% of their income/budget.<br><br><br>
-        <input type="text" id="reference-participant-B" value="" /> owes:
-        <input type="text" id="participant-B-expense-result" value="" />towards the expense.<br>This is
-        <input type="text" id="participant-B-expense-porportion" value="" />% of the expense and <br>
-        <input type="text" id="participant-B-expense-porportion-of-income" value="" />% of their income/budget.<br><br><br>
-    </form>
-
- -->
 </body>
 <script src="script.js"></script>
 
