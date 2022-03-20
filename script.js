@@ -17,14 +17,14 @@ function myFunction() {
   
   let buttons = Array.from(document.getElementById("results").getElementsByClassName('cell'));
   // console.log(buttons);
-  buttons[4].innerText = participantA.value;
-  buttons[5].innerText = "$" + rentA.toFixed(2);
-  buttons[6].innerText = (percentageA*100).toFixed(2) + "%";
-  buttons[7].innerText = ((rentA/participantAIncome.value)*100).toFixed(2) + "%";
-  buttons[8].innerText = participantB.value;
-  buttons[9].innerText = "$" + rentB.toFixed(2);
-  buttons[10].innerText = (percentageB*100).toFixed(2) + "%";
-  buttons[11].innerText = ((rentB/participantBIncome.value)*100).toFixed(2) + "%";
+  buttons[0].innerText = participantA.value;
+  buttons[2].innerText = "$" + rentA.toFixed(2);
+  buttons[4].innerText = (percentageA*100).toFixed(2) + "%";
+  buttons[6].innerText = ((rentA/participantAIncome.value)*100).toFixed(2) + "%";
+  buttons[1].innerText = participantB.value;
+  buttons[3].innerText = "$" + rentB.toFixed(2);
+  buttons[5].innerText = (percentageB*100).toFixed(2) + "%";
+  buttons[7].innerText = ((rentB/participantBIncome.value)*100).toFixed(2) + "%";
 
 // test
 // buttons.map( button => {
