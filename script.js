@@ -21,23 +21,21 @@ function myFunction() {
   
   // document.getElementById("results");
 
-  document.getElementById("reference-participant-A").value = participantA.value;
+  // document.getElementById("reference-participant-A").value = participantA.value;
   var percentageA = parseFloat(participantAIncome.value/totalIncome);
-  document.getElementById("participant-A-expense-porportion").value = (percentageA*100).toFixed(2);
+  // document.getElementById("participant-A-expense-porportion").value = (percentageA*100).toFixed(2);
   var rentA = percentageA*expenseValue.value;
-  document.getElementById("participant-A-expense-result").value = rentA.toFixed(2);
-  document.getElementById("participant-A-expense-porportion-of-income").value = ((rentA/participantAIncome.value)*100).toFixed(2);
+  // document.getElementById("participant-A-expense-result").value = rentA.toFixed(2);
+  // document.getElementById("participant-A-expense-porportion-of-income").value = ((rentA/participantAIncome.value)*100).toFixed(2);
   
 
-  document.getElementById("reference-participant-B").value = participantB.value;
+  // document.getElementById("reference-participant-B").value = participantB.value;
   var percentageB = parseFloat(participantBIncome.value/totalIncome);
-  document.getElementById("participant-B-expense-porportion").value = (percentageB*100).toFixed(2);
+  // document.getElementById("participant-B-expense-porportion").value = (percentageB*100).toFixed(2);
   var rentB = percentageB*expenseValue.value;
-  document.getElementById("participant-B-expense-result").value = rentB.toFixed(2);
-  document.getElementById("participant-B-expense-porportion-of-income").value = ((rentB/participantBIncome.value)*100).toFixed(2);
+  // document.getElementById("participant-B-expense-result").value = rentB.toFixed(2);
+  // document.getElementById("participant-B-expense-porportion-of-income").value = ((rentB/participantBIncome.value)*100).toFixed(2);
   
-
-
   // console.log(typeof parseFloat(expenseValue.value));
 
   let buttons = Array.from(document.getElementsByClassName('cell'));
@@ -57,4 +55,9 @@ function myFunction() {
       //   buttons[i].innerText = "test";
       //   console.log(buttons[i].getAttribute("id"));
 //end test
+
+
+document.getElementById("text-results-A").innerText = participantA.value + " owes: $" + rentA.toFixed(2) + " towards the expense.\nThis is " + (percentageA*100).toFixed(2) + "% of the expense and " + ((rentA/participantAIncome.value)*100).toFixed(2) + "% of their income/budget.";
+document.getElementById("text-results-B").innerText = participantB.value + " owes: $" + rentB.toFixed(2) + " towards the expense.\nThis is " + (percentageB*100).toFixed(2) + "% of the expense and " + ((rentB/participantBIncome.value)*100).toFixed(2) + "% of their income/budget.";
+
 }

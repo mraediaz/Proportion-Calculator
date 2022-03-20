@@ -4,18 +4,17 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
-  font-weight: normal;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
 }
 
 h1{
-  font-family: 'Lato', sans-serif;
   /*color: #cb844e;*/
   color: #844236;
   letter-spacing: 5px;
 }
 
 h3{
-  font-family: 'Lato', sans-serif;
   color: #cb844e;
   /*color: #844236;*/
   letter-spacing: 5px;
@@ -56,10 +55,9 @@ h3{
 }
 
 .row .cell {
-    /*font-family: Poppins-Regular;*/
     font-size: 15px;
-    color: #666;
-    line-height: 1;
+/*    color: #666;
+*/    line-height: 1;
     font-weight: unset !important;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -68,9 +66,8 @@ h3{
 }
 
 .row.header .cell {
-    /*font-family: Poppins-Regular;*/
     font-size: 18px;
-    color: #fff;
+    /*color: #fff;*/
     line-height: 1;
     font-weight: unset !important;
     padding-top: 10px;

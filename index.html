@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Calculates what every participant's portion of an expense should be." property="og:description" />
-    <meta name="keywords" content="Portion,Ratio,Share,Percentage,Rent-Split,Rent,Split,Splitting,Splitter,Income,Expense,Roommate,Housband,Wife,Partner,Friend,Friends,Calculator,Calculate,Figure-Out,Split,Joint,Fair,Joint-Income,Shared,Costs,Cost,Share,Equal,Proportional,Partition,Partitioned,Mortgage,Utility,Budget,Shares,Money,Bills,Gas,Finances,Finance,Economies,Cash,Check,Fund,Earnings,Calculations,Charge,Repayment,Payment,Transfer,different-salaries,different-budget,different-income" />
+    <meta name="keywords" content="Portion,Ratio,Share,Percentage,Rent-Split,Rent,Split,Splitting,Splitter,Income,Expense,Roommate,Housband,Wife,Partner,Friend,Friends,Calculator,Calculate,Figure-Out,Split,Joint,Fair,Joint-Income,Shared,Costs,Cost,Share,Equal,Proportional,Partition,Partitioned,Mortgage,Utility,Budget,Shares,Money,Bills,Gas,Finances,Finance,Economies,Cash,Check,Fund,Earnings,Calculations,Charge,Repayment,Payment,Transfer,different-salaries,different-budget,different-income,50/50,50-50,fifty-fifty,fifty fifty" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
@@ -33,9 +33,9 @@
         Expense: <input type="text" id="expense-value" value="510" /><br><br>
     </form>
     <form id="participants">
-        Person A: <input type="text" id="participant-A" value="Melany" />
-        income/budget: <input type="currency-field" id="participant-A-income" value="120000" /><br>
-        Person B: <input type="text" id="participant-B" value="Bastien" />
+        Person A: <input type="text" id="participant-A" value="Melany" /><br>
+        income/budget: <input type="currency-field" id="participant-A-income" value="120000" /><br><br>
+        Person B: <input type="text" id="participant-B" value="Bastien" /><br>
         income/budget: <input type="currency-field" id="participant-B-income" value="120000" /><br><br>
     </form>
     <button onclick="myFunction()">Calculate!</button>
@@ -93,7 +93,10 @@
         <!-- </div> -->
     </div>
 
-    <form id="results">
+    <h3 id="text-results-A"></h3>
+    <h3 id="text-results-B"></h3>
+
+  <!--   <form id="results">
         <br><br><br><input type="text" id="reference-participant-A" value="" /> owes:
         <input type="text" id="participant-A-expense-result" value="" />towards the expense.
         <br>This is
@@ -105,7 +108,7 @@
         <input type="text" id="participant-B-expense-porportion-of-income" value="" />% of their income/budget.<br><br><br>
     </form>
 
-
+ -->
 </body>
 <script src="script.js"></script>
 
