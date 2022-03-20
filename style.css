@@ -20,14 +20,13 @@ h3{
   letter-spacing: 5px;
 }
 
-
 .limiter {
     width: 100%;
     margin: 0 auto
 }
 
 .wrap-table100 {
-    width: 560px;
+    max-width: 560px;
     border-radius: 10px;
     overflow: hidden
 }
@@ -40,7 +39,7 @@ h3{
 
 .cell {
     display: table-cell;
-    width: 200px;
+    width: 50%;
     background-color: #fff;
     color: black;
 }
