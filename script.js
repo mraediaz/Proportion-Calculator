@@ -1,3 +1,5 @@
+var $saved = $("#Row2");
+
 // information stored in a map of arrays. 
 // participants = ["name", [income, percentage of expense, expense contribution, percentage of income]]
 function getParticipants() {
@@ -72,6 +74,14 @@ function addParticipant() {
   //add row to input table
   var count = 1,
      first_row = $('#Row2');
+     // alert(JSON.stringify(first_row.clone(),null,4));
+     
+     //if Row2 was removed
+     if(first_row['0'] === undefined){
+      // alert ('hi');
+      first_row = $saved;
+     }
+
   while (count-- > 0) first_row.clone().appendTo('#inputTable');
 
   //add column to output table
@@ -83,28 +93,29 @@ function addParticipant() {
     });
     iter += 1;
 
+    myFunction();
+
 }
 
 function removeParticipant(attr){
-  console.log(attr);
+  // console.log(attr);
+  $(attr).parent('div').remove();
+  
+  //doing this as a bandaid, should be removing results column approriately
+  // $( "#results" ).load( "index.html #results" );
+    var el = document.getElementById('results').getElementsByClassName('row');
+    for(let i = 0; i < el.length; i++){
+        let r = el[i].getElementsByClassName('cell')[0];
+        r.remove(); // Removes the div with the 'div-02' id
 
-  var participants = getParticipants();
-  let name = attr.previousElementSibling.value;
-  // console.log(name);
+  myFunction();
+    }
 
-  participants.delete(name);
-  myFunction(participants);
-
-  //remove html
-}
+  }
 
 
-
-function myFunction(participants) {
-    if (participants === undefined) {
-      participants = getParticipants();;
-    } 
-    console.log(participants);
+function myFunction() {
+    var participants = getParticipants();;
 
     var textOut = "";
     let index = 0;
