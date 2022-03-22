@@ -32,35 +32,51 @@
     <h3>Fairly calculate the cost of an expense based on each person's income or budget.</h3>
     <div class="limiter">
         <div class="wrap-table100">
-            <div class="table" name="input">
-                <div class="row header">
+            <div class="table">
+                <div class="row header"  id="inputExpense">
                     <div class="cell">
                         Expense
                     </div>
                     <div class="cell">
-                        $<input type="text" id="expense-value" value="510" />
+                        $<input type="text" id="expenseValue" value="510" />
                     </div>
                 </div>
-                <div class="row">
-                    <div class="cell" id="Name">
-                        <input type="text" id="participant-A" value="Melany" />
+                <br><br>
+                <div class="row header">
+                    <div class="cell">
+                        Participants
                     </div>
-                    <div class="cell" id="Income">
-                        $<input type="currency-field" id="participant-A-income" value="130000" />
+                    <div class="cell">
+                        Budget/Income
                     </div>
                 </div>
-                <div class="row">
-                    <div class="cell" id="Name">
-                        <input type="text" id="participant-B" value="Bastien" />
+
+                <div class="row"  name="inputParticipant">
+                    <div class="cell" id="name">
+                        <input type="text" value="Melany" />
                     </div>
-                    <div class="cell" id="Income">
-                        $<input type="currency-field" id="participant-B-income" value="120000" />
+                    <div class="cell" id="income">
+                        $<input type="currency-field" value="130000" />
+                    </div>
+                </div>
+
+                <div class="row"  name="inputParticipant">
+                    <div class="cell" id="name">
+                        <input type="text" value="Bastien" />
+                    </div>
+                    <div class="cell" id="income">
+                        $<input type="currency-field" value="120000" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <button onclick="myFunction()">Calculate!</button>
+    
+    <br>
+    
+    <button onclick="AddParticipant()">Add a Participant</button>
+    <button onclick="myFunction()">Calculate</button>
+    
     <h1>RESULTS</h1>
     <div id="results">
         <div class="limiter">
@@ -68,24 +84,24 @@
                 <div class="table">
                     <!-- <div class="row header"> -->
                     <!-- </div> -->
-                    <div class="row">
+                    <div class="row" id="resultsName">
                        <div class="th" style="font-size: 15px; padding-top: 10px; padding-bottom: 10px; padding-left: 5px;"> Name </div> 
                         <div class="cell" id="Name"></div>
                         <div class="cell" id="Name"></div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="resultsContribution">
                        <div class="th" style="font-size: 15px; padding-top: 10px; padding-bottom: 10px; padding-left: 5px;"> Expense Contribution </div> 
                         <div class="cell" id="Expense Contribution"></div>
                         <div class="cell" id="Expense Contribution"></div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" id="resultsContributionPercent">
                        <div class="th" style="font-size: 15px; padding-top: 10px; padding-bottom: 10px; padding-left: 5px;"> % of Expense </div> 
                         <div class="cell" id="% of Expense"></div>
                         <div class="cell" id="% of Expense"></div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" id="resultsIncomePercent">
                        <div class="th" style="font-size: 15px; padding-top: 10px; padding-bottom: 10px; padding-left: 5px;"> % of Income/Budget </div> 
                         <div class="cell" id="% of Income/Budget"></div>
                         <div class="cell" id="% of Income/Budget"></div>
@@ -96,8 +112,7 @@
             </div>
         </div>
     </div>
-    <h3 id="text-results-A"></h3>
-    <h3 id="text-results-B"></h3>
+    <h3 id="textResults"></h3>
 </body>
 <script src="script.js"></script>
 
