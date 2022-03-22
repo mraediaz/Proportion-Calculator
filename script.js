@@ -9,14 +9,16 @@ function getParticipants() {
     counter = 0;
     for (var i of x.values()) {
         let name = i.children['name']['firstElementChild'].value;
+      
+        // console.log(name);
+        //repeated names
         if(participants.has(name)){
           name+=counter;
-          console.log(name);
           counter++;
         }
         participants.set(name, [i.children['income']['firstElementChild'].value]);
     }
-    console.log(...participants);
+    // console.log(...participants);
 
     //calculations
     let totalIncome = 0;
@@ -65,11 +67,46 @@ function getParticipants() {
 
 
 
+function addParticipant() {
+  
+  //add row to input table
+  var count = 1,
+     first_row = $('#Row2');
+  while (count-- > 0) first_row.clone().appendTo('#inputTable');
 
-function myFunction() {
+  //add column to output table
+  var myform = $('#results'),
+      iter = 0;
+    myform.find('.row').each(function(){
+      var trow = $(this);
+      trow.append('<div class="cell" id="Name"></div>');     
+    });
+    iter += 1;
+
+}
+
+function removeParticipant(attr){
+  console.log(attr);
+
+  var participants = getParticipants();
+  let name = attr.previousElementSibling.value;
+  // console.log(name);
+
+  participants.delete(name);
+  myFunction(participants);
+
+  //remove html
+}
+
+
+
+function myFunction(participants) {
+    if (participants === undefined) {
+      participants = getParticipants();;
+    } 
+    console.log(participants);
+
     var textOut = "";
-    var participants = getParticipants();
-
     let index = 0;
     participants.forEach(function(value, key) {
         // console.log(key + value);
@@ -105,22 +142,3 @@ function myFunction() {
     document.getElementById("textResults").innerText = textOut;
 
 }
-
-function addParticipant() {
-  
-  //add row to input table
-  var count = 1,
-     first_row = $('#Row2');
-  while (count-- > 0) first_row.clone().appendTo('#inputTable');
-
-  //add column to output table
-  var myform = $('#results'),
-      iter = 0;
-    myform.find('.row').each(function(){
-      var trow = $(this);
-      trow.append('<div class="cell" id="Name"></div>');     
-    });
-    iter += 1;
-
-}
-
