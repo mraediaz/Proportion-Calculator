@@ -106,7 +106,7 @@ function removeParticipant(attr){
     var el = document.getElementById('results').getElementsByClassName('row');
     for(let i = 0; i < el.length; i++){
         let r = el[i].getElementsByClassName('cell')[0];
-        r.remove(); // Removes the div with the 'div-02' id
+        r.remove(); // s
 
   myFunction();
     }
