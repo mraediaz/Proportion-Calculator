@@ -65,18 +65,29 @@ function myFunction() {
 
     let index = 0;
     participants.forEach(function(value, key) {
-        console.log(key + value);
+        // console.log(key + value);
 
+        //populate table cells
         let buttons = Array.from(document.getElementById("results").getElementsByClassName('cell'));
-        // for(let i = 0; i < buttons.length; i++){
-        buttons[index + 0].innerText = key;
-        buttons[index + 2].innerText = "$" + value[2];
-        buttons[index + 4].innerText = value[1] + "%";
-        buttons[index + 6].innerText = value[3] + "%";
-        // }
+        // console.log(buttons);
+        let place = 0;
+        for(let i = 0; i < buttons.length; i++){
+          buttons[(index + place)].innerText = key;
+          place += participants.size;
 
-        console.log(buttons);
+          buttons[(index + place)].innerText = "$" + value[2];
+          place += participants.size;
 
+          buttons[(index + place)].innerText = value[1] + "%";
+          place += participants.size;
+
+          buttons[(index + place)].innerText = value[3] + "%";
+          place += participants.size;
+
+          place = 0;
+        }
+
+        //populate output text
         textOut += key + " owes: $" +
             value[2] + " towards the expense.\nThis is " +
             value[1] + "% of the expense and " +
