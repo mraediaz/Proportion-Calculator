@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+
+
     <!-- Hotjar Tracking Code for https://split-expense.com -->
     <script>
         (function(h,o,t,j,a,r){
@@ -23,6 +25,7 @@
                 a.appendChild(r);
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
         </script>
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7985313176921037"
      crossorigin="anonymous"></script>
 </head>
@@ -32,7 +35,7 @@
     <h3>Fairly calculate the cost of an expense based on each person's income or budget.</h3>
     <div class="limiter">
         <div class="wrap-table100">
-            <div class="table">
+            <div class="table" id='inputTable'>
                 <div class="row header"  id="inputExpense">
                     <div class="cell">
                         Expense
@@ -60,7 +63,7 @@
                     </div>
                 </div>
 
-                <div class="row"  name="inputParticipant">
+                <div class="row"  name="inputParticipant" id="Row2">
                     <div class="cell" id="name">
                         <input type="text" value="Bastien" />
                     </div>
@@ -74,7 +77,7 @@
     
     <br>
     
-    <button onclick="AddParticipant()">Add a Participant</button>
+    <button onclick="addParticipant()">Add a Participant</button>
     <button onclick="myFunction()">Calculate</button>
     
     <h1>RESULTS</h1>
@@ -114,6 +117,7 @@
     </div>
     <h3 id="textResults"></h3>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="script.js"></script>
 
 </html>

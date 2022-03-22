@@ -26,20 +26,26 @@ h3{
 }
 
 .wrap-table100 {
-    max-width: 560px;
+    max-width: 570px;
     border-radius: 10px;
-    overflow: hidden
+    /*overflow: hidden;*/
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .table {
     width: 100%;
         /*display: block*/
     display: table;
+    /*table-layout: fixed;*/
+    /*overflow-x: scroll;    */
 }
 
 .cell {
     display: table-cell;
-    width: 50%;
+    width: 190px;
+    min-width: 190px;
     background-color: #fff;
     color: black;
 }

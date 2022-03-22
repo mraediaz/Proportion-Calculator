@@ -98,3 +98,22 @@ function myFunction() {
     document.getElementById("textResults").innerText = textOut;
 
 }
+
+function addParticipant() {
+  
+  //add row to input table
+  var count = 1,
+     first_row = $('#Row2');
+  while (count-- > 0) first_row.clone().appendTo('#inputTable');
+
+  //add column to output table
+  var myform = $('#results'),
+      iter = 0;
+    myform.find('.row').each(function(){
+      var trow = $(this);
+      trow.append('<div class="cell" id="Name"></div>');     
+    });
+    iter += 1;
+
+}
+
