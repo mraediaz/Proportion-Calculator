@@ -6,10 +6,17 @@ function getParticipants() {
     //get input information
     var x = document.getElementsByName("inputParticipant");
     var participants = new Map();
+    counter = 0;
     for (var i of x.values()) {
-        participants.set(i.children['name']['firstElementChild'].value, [i.children['income']['firstElementChild'].value]);
+        let name = i.children['name']['firstElementChild'].value;
+        if(participants.has(name)){
+          name+=counter;
+          console.log(name);
+          counter++;
+        }
+        participants.set(name, [i.children['income']['firstElementChild'].value]);
     }
-
+    console.log(...participants);
 
     //calculations
     let totalIncome = 0;
