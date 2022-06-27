@@ -103,3 +103,52 @@ h3{
     background-color: #ecb78f ;
     cursor: pointer;
 }
+
+.wrap-collapsible100 {
+    max-width: 1000px;
+    border-radius: 10px;
+    /*overflow: hidden;*/
+    display: block;
+    overflow-x: auto;
+    /*white-space: nowrap;*/
+}
+
+.collapsible {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 3  px; 
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #a56458;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+}
+
+.active, .collapsible:hover {
+  background-color: #ecb78f;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding:75 75px;
+  max-height: 0;
+  width: 100%; 
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
